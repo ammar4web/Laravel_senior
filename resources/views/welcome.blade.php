@@ -123,6 +123,17 @@
                         </div>
                     </div>
 
+                    {{-- code for padding data ro views form Route --}}
+                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                        {{-- {{ $data }} --}}
+                        <span>{{ $data1 }}</span>
+                        <span> | </span>
+                        <span>{{ $data2 }}</span>
+                        {{-- associative array: we use the key of it --}}
+                        <span> | </span>
+                        <span>{{ $data3 }}</span>
+                    </div>
+
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>

@@ -16,7 +16,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    //
+    // We can pass data from 'the route', but just in special situations and not in general, so don't do that, please.
+    // We pass data from 'the controller',
+    //
+
+    // one parameter
+    // ->with('data', "My data From Route");
+    // return view('welcome')->with('data', "My data From Route");
+
+    // two parameters
+    // ->with(['data1' => "My data1 From Route", 'data2' => "My data2 From Route"]);
+    // return view('welcome')->with(['data1' => "My data1 From Route", 'data2' => "My data2 From Route"]);
+
+    //associative array
+    $data = [
+        "data1" => "My data1 From Route",
+        "data2" => "My data2 From Route",
+        "data3" => "My data3 From Route",
+    ];
+    // without with()
+    return view('welcome', $data);
 });
 
 Auth::routes();
