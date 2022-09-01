@@ -15,6 +15,15 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <div class="text-center">
+                        <p class="pt-3">{{ $data1 }}</p>
+                        <p>{{ $data2 }}</p>
+                        <p>{{ $data3 }}</p>
+                        <hr />
+                        <p class="pt-3">{{ $opj->data1 }}</p>
+                        <p>{{ $opj->data2 }}</p>
+                        <p>{{ $opj->data3 }}</p>
+                    </div>
                 </div>
             </div>
         </div>
