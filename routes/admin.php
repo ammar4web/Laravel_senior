@@ -40,3 +40,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 });
 
 Route::get("/admin/home", [App\Http\Controllers\Admin\AdminHomeController::class, "home"]);
+Route::get("/admin/exception", [App\Http\Controllers\Admin\AdminHomeController::class, "exception"]);
