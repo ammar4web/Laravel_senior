@@ -32,3 +32,9 @@ Route::middleware('auth')->group(function () {
 Route::get('middleware-just', function () {
     return "Hello by Route usining middleware without group";
 })->middleware('auth');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+    Route::get('group', function () {
+        return "Hello from Admin home by usining group()";
+    });
+});
