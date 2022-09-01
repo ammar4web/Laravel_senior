@@ -22,3 +22,9 @@ Route::prefix('admin')->group(function () {
         return "Hello from Admin home by usining prefix()";
     });
 });
+
+Route::middleware('auth')->group(function () {
+    Route::get('middleware', function () {
+        return "Hello by Route usining middleware with group";
+    });
+});
