@@ -28,3 +28,7 @@ Route::middleware('auth')->group(function () {
         return "Hello by Route usining middleware with group";
     });
 });
+
+Route::get('middleware-just', function () {
+    return "Hello by Route usining middleware without group";
+})->middleware('auth');
