@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Test\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,3 +42,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 Route::get("/admin/home", [App\Http\Controllers\Admin\AdminHomeController::class, "home"]);
 Route::get("/admin/exception", [App\Http\Controllers\Admin\AdminHomeController::class, "exception"]);
+
+Route::resource("news", NewsController::class);
