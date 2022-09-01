@@ -25,7 +25,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view(view: 'test\news\create');
     }
 
     /**
