@@ -38,3 +38,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return "Hello from Admin home by usining group()";
     });
 });
+
+Route::get("/admin/home", [App\Http\Controllers\Admin\AdminHomeController::class, "home"]);
