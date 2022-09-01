@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin', function () {
     return "Hello from Admin Role.";
 });
+
+Route::prefix('admin')->group(function () {
+    Route::get('prefix', function () {
+        return "Hello from Admin home by usining prefix()";
+    });
+});
